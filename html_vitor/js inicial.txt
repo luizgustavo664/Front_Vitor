@@ -1,0 +1,27 @@
+js 
+function searchModel() {
+    const searchTerm = document.getElementById('search-input').value.toLowerCase();
+    const models = ["superstar", "gazelle", "adi2000", "campus", "samba"];
+    
+    if (models.includes(searchTerm)) {
+        window.location.href = `tenis.html?model=${searchTerm}`;
+    } else {
+        alert("Modelo não encontrado! Tente: Superstar, Gazelle, Adi 2000, Campus ou Samba.");
+    }
+}
+
+// Código para a página de detalhes do tênis
+const urlParams = new URLSearchParams(window)
+document.querySelectorAll('.size-box').forEach(box => {
+    box.addEventListener('click', () => {
+        document.querySelectorAll('.size-box').forEach(b => b.classList.remove('selected'));
+        box.classList.add('selected');
+    });
+});
+
+document.querySelectorAll('.color-box').forEach(box => {
+    box.addEventListener('click', () => {
+        document.querySelectorAll('.color-box').forEach(b => b.classList.remove('selected'));
+        box.classList.add('selected');
+    });
+});

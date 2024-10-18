@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Tênis - Adidas</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Vinculando o CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Ícone do carrinho -->
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Adidas</div>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Buscar modelos...">
+            <input type="submit" value="Buscar" onclick="searchModel()">
+        </div>
+        <div class="cart-icon" onclick="redirectToPurchase()" style="cursor: pointer;">
+            <i class="fas fa-shopping-cart" style="color: white; font-size: 24px;"></i>
+        </div>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <div class="main-content">
+        <h1 id="model-title">Adidas Superstar</h1>
+        <img id="model-image" src="https://via.placeholder.com/400x300?text=Adidas+Superstar" alt="Adidas Superstar">
+        <h2>Detalhes</h2>
+
+        <div>
+            <h3>Tamanhos disponíveis:</h3>
+            <div id="size-options">
+                <div class="size-box" data-size="36">36</div>
+                <div class="size-box" data-size="37">37</div>
+                <div class="size-box" data-size="38">38</div>
+                <div class="size-box" data-size="39">39</div>
+                <div class="size-box" data-size="40">40</div>
+                <div class="size-box" data-size="41">41</div>
+                <div class="size-box" data-size="42">42</div>
+            </div>
+        </div>
+
+        <div>
+            <h3>Cores disponíveis:</h3>
+            <div id="color-options">
+                <div class="color-box" data-color="branco" style="background-color: white;"></div>
+                <div class="color-box" data-color="preto" style="background-color: black;"></div>
+                <div class="color-box" data-color="azul" style="background-color: blue;"></div>
+                <div class="color-box" data-color="verde" style="background-color: green;"></div>
+                <div class="color-box" data-color="rosa" style="background-color: pink;"></div>
+            </div>
+        </div>
+
+        <!-- Box de Compra -->
+        <div class="buy-box">
+            <button onclick="redirectToPurchase()">Comprar</button>
+        </div>
+    </div>
+
+    <footer>
+        © 2024 Adidas Brasil - Modelos Exclusivos. Todos os direitos reservados.
+    </footer>
+
+    <script src="script.js"></script> <!-- Vinculando o JavaScript -->
+</body>
+</html>

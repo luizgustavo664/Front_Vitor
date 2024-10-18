@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #F5F5DC; /* Cor de fundo bege */
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #004080; /* Azul mais claro */
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Para ficar acima do conteúdo */
+}
+
+.navbar .logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.search-bar {
+    display: flex;
+}
+
+.search-bar input[type="text"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+}
+
+.search-bar input[type="submit"] {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #0056A6; /* Azul mais claro para o botão */
+    color: white;
+    cursor: pointer;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #002147; /* Azul-marinho */
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    margin-top: 60px; /* Para não sobrepor a navbar */
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+}
+
+.sidebar p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #FAF3E0; /* Um tom de bege claro para o conteúdo principal */
+    border-left: 1px solid #ccc; /* Borda para separação */
+    margin-top: 60px; /* Para não sobrepor a navbar */
+}
+
+.image-slider {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px;
+    background-color: #E0E0E0; /* Cor de fundo para o slider */
+}
+
+.image-slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: slide 20s infinite;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    15% { transform: translateX(0); }
+    20% { transform: translateX(-100%); }
+    35% { transform: translateX(-100%); }
+    40% { transform: translateX(-200%); }
+    55% { transform: translateX(-200%); }
+    60% { transform: translateX(-300%); }
+    75% { transform: translateX(-300%); }
+    80% { transform: translateX(-400%); }
+    95% { transform: translateX(-400%); }
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #002147; /* Azul-marinho */
+    color: white;
+    position: relative; /* Alterado para evitar sobreposição */
+    width: 100%;
+}
+
+/* Estilos para tamanhos e cores */
+.size-box, .color-box {
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.size-box.selected, .color-box.selected {
+    background-color: #0056A6; /* Azul mais claro */
+    border-color: #004080; /* Azul mais escuro */
+    color: white;
+}
+
+.color-box {
+    width: 40px;
+    height: 40px;
+}
+.size-box, .color-box {
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    text-align: center;
+}
+
+.size-box.selected, .color-box.selected {
+    background-color: #0056A6; /* Azul mais claro */
+    border-color: #004080; /* Azul mais escuro */
+    color: white;
+}
+
+.color-box {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Tornando as cores circulares */
+}
+.buy-box {
+    margin-top: 20px;
+}
+
+.buy-box button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #0056A6; /* Azul mais claro */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.buy-box button:hover {
+    background-color: #004080; /* Azul mais escuro ao passar o mouse */
+}

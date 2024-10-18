@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra - Adidas</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Vinculando o CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Ícone do carrinho -->
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Adidas</div>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Buscar modelos...">
+            <input type="submit" value="Buscar" onclick="searchModel()">
+        </div>
+        <div class="cart-icon" onclick="redirectToPurchase()" style="cursor: pointer;">
+            <i class="fas fa-shopping-cart" style="color: white; font-size: 24px;"></i>
+        </div>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <div class="main-content">
+        <h1>Detalhes da Compra</h1>
+        <div id="purchase-details"></div>
+    </div>
+
+    <footer>
+        © 2024 Adidas Brasil - Modelos Exclusivos. Todos os direitos reservados.
+    </footer>
+
+    <script src="script.js"></script> <!-- Vinculando o JavaScript -->
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const size = urlParams.get('size');
+        const color = urlParams.get('color');
+        
+        document.getElementById('purchase-details').innerHTML = `
+            <p>Tamanho selecionado: ${size}</p>
+            <p>Cor selecionada: ${color}</p>
+            <button onclick="alert('Compra realizada com sucesso!')">Finalizar Compra</button>
+        `;
+    </script>
+</body>
+</html>
