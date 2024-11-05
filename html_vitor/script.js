@@ -76,3 +76,9 @@ function redirectToPurchase() {
     // Redireciona para a página de compra com os parâmetros de tamanho e cor
     window.location.href = `purchase.html?size=${size}&color=${color}`;
 }
+
+
+
+
+
+
